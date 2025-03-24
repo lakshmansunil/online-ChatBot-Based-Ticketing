@@ -42,8 +42,8 @@ def convert_to_int(price):
 
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
-SMTP_USER = "korukoppulamohanapriya@gmail.com"
-SMTP_PASS = "oace ajek woxx szwu"
+SMTP_USER = os.getenv("SMTP_USER")  # Load from environment variable
+SMTP_PASS = os.getenv("SMTP_PASS")  # Load securely
 
 # MySQL database configuration
 db_config = {
