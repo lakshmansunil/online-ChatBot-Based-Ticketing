@@ -2070,6 +2070,4 @@ def send_subscription_email(user_email):
         print("❌ Error sending confirmation email:", e)
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8080)  # Change the port number as needed
-else:
-    gunicorn_app = app
+    app.run(debug=True)
