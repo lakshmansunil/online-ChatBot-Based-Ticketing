@@ -2070,4 +2070,7 @@ def send_subscription_email(user_email):
         print("❌ Error sending confirmation email:", e)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=8080)  # Ensure correct host & port
+
+# Gunicorn expects an application instance named `gunicorn_app`
+gunicorn_app = app
